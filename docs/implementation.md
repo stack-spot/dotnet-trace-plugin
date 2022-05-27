@@ -1,17 +1,3 @@
-## **Visão Geral**
-### **dontet-trace-app-plugin**
-
-O **dontet-trace-app-plugin** foi projetado para apoiar os desenvolvedores a configurar e utilizar o Opentelemetry com exporter para Jaeger e Instrumentação AWS X-Ray.
-
-## **Uso**
-
-#### **Pré-requisitos**
-Para utilizar esse plugin é necessário ter uma stack DotNET criada pelo `CLI` do `StackSpot` que você pode baixar [**aqui**](https://stackspot.com/).
-
-Ter instalado:
-- .NET 5 ou 6 
-- O template `dotnet-api-template` ou o `dotnet-worker-template` deverá estar aplicado para você conseguir utilizar este plugin.
-
 #### **Inputs**
 Os inputs necessários para utilizar o plugin são:
 | **Campo** | **Valor** | **Descrição** |
@@ -70,7 +56,3 @@ Esta etapa não é obrigatória. Execute o comando abaixo para disponibilizar co
 ```
 
 Para visualizar os traces acesse: http://localhost:16686/
-
-### **Implementação**
-- [**Nuget OpenTelemetry**](https://www.nuget.org/packages/StackSpot.Tracing/)
-- [**Nuget X-Ray**](https://www.nuget.org/packages/StackSpot.Tracing.XRay/)
