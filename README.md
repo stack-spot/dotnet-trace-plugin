@@ -1,7 +1,7 @@
 ## **Visão Geral**
-### **dontet-trace-app-plugin**
+### **dontet-trace-plugin**
 
-O **dontet-trace-app-plugin** foi projetado para apoiar os desenvolvedores a configurar e utilizar o Opentelemetry com exporter para Jaeger e Instrumentação AWS X-Ray.
+O **dontet-trace-plugin** foi projetado para apoiar os desenvolvedores a configurar e utilizar o Opentelemetry com exporter para Jaeger e Instrumentação AWS X-Ray.
 
 ## **Uso**
 

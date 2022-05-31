@@ -1,4 +1,4 @@
-name: dotnet-trace-app-plugin
+name: dotnet-trace-plugin
 description: Plugin para instrumentar a telemetria.
 types:
 - app
