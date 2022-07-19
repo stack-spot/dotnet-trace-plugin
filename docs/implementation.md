@@ -1,19 +1,19 @@
-#### **Inputs**
-Os inputs necessários para utilizar o plugin são:
+#### **Configuração de Inputs**  
+Confira os inputs que precisam ser configurados durante a aplicação do plugin:  
+
 | **Campo** | **Valor** | **Descrição** |
 | :--- | :--- | :--- |
 | Type| Padrão: "Jaeger" | Tipo do Exporter(Jaeger, OTLP, X-Ray, X-Ray - Daemon) |
 | Server|  | Hostname do agent  |
 | Port|  | Port do agent  |
-
-- AppName - Nome da Aplicação - Campo Obrigatório.
-- ExporterType - Tipo de Exportação (Jaeger, x-ray ou otlp).
-- Host - Hostname do agent - comunicação via UDP.
-- Port - Porta do agent - comunicação via UDP.
-- ConsoleExporter - Exportar para o console.
-- UseGrpcClientInstrumentation - Habilitar instrumentação gRPC.
-- UseHttpClientInstrumentation - Habilitar instrumentação http.
-- Tags - Headers que serão propagados.
+| AppName | Nome da Aplicação | Campo Obrigatório.
+| ExporterType | Tipo de Exportação (Jaeger, x-ray ou otlp). |
+| Host | Hostname do agent | Comunicação via UDP.
+| Port | Porta do agent | Comunicação via UDP.
+| ConsoleExporter | Exportar para o console. |
+| UseGrpcClientInstrumentation | Habilitar instrumentação gRPC. |
+| UseHttpClientInstrumentation | Habilitar instrumentação http. |
+| Tags | Headers que serão propagados. |
 
 Você pode configurar as variáveis no arquivo `appsettings.json`.
 
@@ -36,9 +36,9 @@ Você pode configurar as variáveis no arquivo `appsettings.json`.
 }
 ```
 
-#### **Configurações**
+#### **Inputs configurados automaticamente**  
 
-Adicione ao seu `IServiceCollection` via `services.AddOpenTelemetryTracing()` no `Startup` da aplicação ou `Program`.
+A configuração abaixo será feita no **`IServiceCollection`**, através do **`services.AddOpenTelemetryTracing()`** no `Startup` da aplicação ou `Program`.
 
 ```csharp
         public void ConfigureServices(IServiceCollection services)
@@ -47,12 +47,12 @@ Adicione ao seu `IServiceCollection` via `services.AddOpenTelemetryTracing()` no
         }
 ```
 
-#### Ambiente local
+#### **Execução em Ambiente local**  
 
-Esta etapa não é obrigatória. Execute o comando abaixo para disponibilizar container `jaegertracing`:
+Para executar o plugin, execute o comando abaixo para disponibilizar o contêiner **`jaegertracing`**:
 
 ```
   docker run -d -p6831:6831/udp -p16686:16686 jaegertracing/all-in-one:latest
 ```
 
-Para visualizar os traces acesse: http://localhost:16686/
+Para visualizar os traces, acesse [este link](http://localhost:16686/).
